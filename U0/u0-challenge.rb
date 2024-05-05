@@ -20,3 +20,11 @@ puts "Subtotal: $#{sub_total}"
 puts "PST: $#{'%.2f' % pst} - #{(PST_TAX * 100).to_i}%"
 puts "GST: $#{'%.2f' % gst} - #{(GST_TAX * 100).to_i}%"
 puts "Grand Total: $#{grand_total}"
+
+if grand_total <= 5.00
+  puts "Pocket Change"
+elsif grand_total > 5.00 && grand_total < 20
+  puts "Wallet Time"
+elsif grand_total >= 20
+  puts "Charge It!"
+end
